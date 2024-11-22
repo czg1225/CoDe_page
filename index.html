@@ -23,8 +23,7 @@
   <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-  <title>Academic Project Page</title>
+  <title>AsyncDiff: Parallelizing Diffusion Models by Asynchronous Denoising</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,50 +51,40 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-2 publication-title">AsyncDiff: Parallelizing Diffusion Models by Asynchronous Denoising</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://github.com/czg1225" target="_blank">Zigeng Chen</a><sup></sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://horseee.github.io"" target="_blank">Xinyin Ma</a><sup></sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
+                    <a href="https://fangggf.github.io/" target="_blank">Gongfan Fang</a><sup></sup>,</span>
+                    <span class="author-block">
+                      <a href="https://github.com/Yuanshi9815" target="_blank">Zhenxiong Tan</a><sup></sup>,</span>
+                      <span class="author-block">
+                        <a href="https://sites.google.com/site/sitexinchaowang/" target="_blank">Xinchao Wang</a>
+                      </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">Learning and Vision Lab, National University of Singapore</span>
                   </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
+                  <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2406.06911" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
-                      <span>Supplementary</span>
+                      <span>Paper</span>
                     </a>
                   </span>
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/czg1225/AsyncDiff" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -103,18 +92,7 @@
                     <span>Code</span>
                   </a>
                 </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-            </div>
+              </div>
           </div>
         </div>
       </div>
@@ -123,22 +101,30 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+<!-- Teaser GIF-->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      
+      <div id="results-carousel">
+        <div class="item">
+          <!-- Your image here -->
+          
+          <div style="text-align: center;">
+            <img src="static/images/combined.png" alt="MY ALT TEXT"/>
+          </div>
+          
+          <h4 class="subtitle is-6 has-text-centered" style="margin-top: +0.1em; color: gray; font-size: medium;">
+              2.8x Faster on SDXL with 4 devices. Top: 50 step original (13.81s). Bottom: 50 step AsyncDiff (4.98s) 
+          </h4>
+        </div>
+        
+      </div>
     </div>
   </div>
 </section>
 <!-- End teaser video -->
+
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -148,7 +134,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Diffusion models have garnered significant interest from the community for their great generative ability across various applications. However, their typical multi-step sequential-denoising nature gives rise to high cumulative latency, thereby precluding the possibilities of parallel computation. To address this, we introduce AsyncDiff, a universal and plug-and-play acceleration scheme that enables model parallelism across multiple devices. Our approach divides the cumbersome noise prediction model into multiple components, assigning each to a different device. To break the dependency chain between these components, it transforms the conventional sequential denoising into an asynchronous process by exploiting the high similarity between hidden states in consecutive diffusion steps. Consequently, each component is facilitated to compute in parallel on separate devices.
+The proposed strategy significantly reduces inference latency while minimally impacting the generative quality. Specifically, for the Stable Diffusion v2.1, AsyncDiff achieves a 2.7x speedup with negligible degradation and a 4.0x speedup with only a slight reduction of 0.38 in CLIP Score, on four NVIDIA A5000 GPUs. 
+Our experiments also demonstrate AsyncDiff can be readily applied to video diffusion models with encouraging performances.
+          </p>
+          <p>
+            <b>Keywords: Diffusion Models, Distributed Inference, Model Parallelism, Acceleration</b>
           </p>
         </div>
       </div>
@@ -162,35 +153,53 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Results<br></h2>
+      </div>
+      <div id="results-carousel">
+        <div class="item">
+         <!-- Your image here -->
+         <center>
+           <img src="static/images/combined.gif" style="width: 70%;" alt="MY ALT TEXT"/>
+         </center>
+         <h4 class="subtitle is-6 has-text-centered" style="margin-bottom: 1.5em;">
+          1.8x Faster on AnimateDiff with 2 devices. Top: 50 step original (43.5s). Bottom: 50 step AsyncDiff (24.5s)
+         </h4>
+       </div>
+      
+        <div id="results-carousel">
+          <div class="item">
+          <!-- Your image here -->
+          <center>
+            <img src="static/images/combined2.gif" style="width: 70%;" alt="MY ALT TEXT"/>
+          </center>
+          <h4 class="subtitle is-6 has-text-centered" style="margin-bottom: 1.5em;">
+            From left to right: Original SVD (184s), AsyncDiff 2 devices (101s), AsyncDiff 3 devices (80s), AsyncDiff 4 devices (68s)
+          </h4>
+        </div>
+      
+        <div id="results-carousel">
+          <div class="item">
+          <!-- Your image here -->
+          <center>
+            <img src="static/images/qualitative.png" style="width: 70%;" alt="MY ALT TEXT"/>
+          </center>
+          <h4 class="subtitle is-6 has-text-centered" style="margin-bottom: 1.5em;">
+            Qualitative Results on SDXL with diffenrent configurations and warm-up steps
+          </h4>
+        </div>
+
+      <div id="results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+        <center>
+          <img src="static/images/qualitative2.png" style="width: 70%;" alt="MY ALT TEXT"/>
+        </center>
+        <h4 class="subtitle is-6 has-text-centered" style="margin-bottom: 1.5em;">
+          Qualitative Results on SD 2.1 with diffenrent configurations and warm-up steps
+        </h4>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
+
   </div>
 </div>
 </div>
@@ -200,85 +209,20 @@
 
 
 
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>
+        @misc{chen2024asyncdiff,
+          title={AsyncDiff: Parallelizing Diffusion Models by Asynchronous Denoising}, 
+          author={Zigeng Chen and Xinyin Ma and Gongfan Fang and Zhenxiong Tan and Xinchao Wang},
+          year={2024},
+          eprint={2406.06911},
+          archivePrefix={arXiv},
+          primaryClass={cs.CV}
+    }
+      </code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
@@ -292,7 +236,7 @@
 
           <p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
 
@@ -304,9 +248,23 @@
 
 <!-- Statcounter tracking code -->
   
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
+<!-- Statcounter code for personal website http://horseee.github.io on Google
+Sites (new) -->
+<!-- Statcounter code for DeepCache
+https://horseee.github.io/Diffusion_DeepCache/ on Google Sites (new) -->
+<script type="text/javascript">
+  var sc_project=12946009; 
+  var sc_invisible=1; 
+  var sc_security="5dee1abd"; 
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript><div class="statcounter"><a title="Web Analytics Made Easy -
+  Statcounter" href="https://statcounter.com/" target="_blank"><img
+  class="statcounter" src="https://c.statcounter.com/12946009/0/5dee1abd/1/"
+  alt="Web Analytics Made Easy - Statcounter"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
 
   </body>
   </html>
